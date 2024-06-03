@@ -56,10 +56,69 @@
 версия: 3.0.3
     <br>
 У данной версии есть уязвимость - “Remote Denial of Service”  <a href="https://www.exploit-db.com/exploits/49719">EDB-ID:49719</a>
+    
+<h4>Эксплуатация уязвимости:</h4>скачиваем скрипт - <a href="https://www.exploit-db.com/exploits/49719">*клик*</a> и запускае его указав нужные параметры(можно запустить через несколько машин, либо используя прокси для достижении нужного результата), после чего сервис vsftpd на машине упадет.</b></i>
     <br>
-<i><b>Эксплуатация уязвимости:</b></i> скачиваем скрипт - <a href="https://www.exploit-db.com/exploits/49719">*клик*</a> и запускае его указав нужные параметры(можно запустить через несколько машин, либо используя прокси для достижении нужного результата), после чего сервис vsftpd на машине упадет.</b></i>
+   <h4> <i><b>Рекомендация по устранении уязвимости:</b></i></h4>
+    <ul>
+      <li>
+Обновить сервис vsftpd до последней версии
+      </li>
+    </ul>
+    <br>
+    <h4><i><b>Скриншоты эксплуатации уязвимости:</b></i></h4>
+    <img src="https://github.com/Medok228/Course-work-/blob/main/images/image10.png">
+     <img src="https://github.com/Medok228/Course-work-/blob/main/images/image8.png">
+    <img src="https://github.com/Medok228/Course-work-/blob/main/images/image1.png">
   </li>
+    <li>Открыт 22 порт на котором находится
+сервис: ssh
+версия:OpenSSH 7.6p1 
+      <br>
+У данной версии есть уязвимость - “OpenSSH 2.3 < 7.7 - Username Enumeration” <a href="https://www.exploit-db.com/exploits/45233">EDB-ID:45233</a>
+  <h4>Эксплуатация уязвимости:</h4>  
+  скачиваем скрипт - <a href="https://www.exploit-db.com/exploits/45233">*клик*</a>  и запускае его указав нужные параметры после чего нам выдаст возможные логины сервиса
+  <h4>Рекомендация по устранении уязвимости:</h4>
+  <ul>
+<li>установить сервисы предотвращающие переборы(fail2ban)</li>
+<li>обновить сервис до последней версии</li>
+  </ul>
+<h4>Скриншоты эксплуатации уязвимости</h4>
+   <img src="https://github.com/Medok228/Course-work-/blob/main/images/image3.png">
+</li>
+<li>
+уязвимость IDOR, получение доступа к закрытым страницам сайта посредством обращение к ним прямыми ссылками
+<h4>Эксплуатация уязвимости:</h4> вводим в адресную строку
+http://{IP}:8888/commercial/index.html
+Где {IP} это локальный ip адрес машины на которой находиться приложение
+<h4>Рекомендация по устранении уязвимости;</h4>
+  <ul>
+    <li>
+Установить проверку пользователя, есть ли права на указанную страницу или действие;</li>
+  </ul>
+<h4>Скриншоты эксплуатации уязвимости:</h4>
+ <img src="https://github.com/Medok228/Course-work-/blob/main/images/image5.png">
+ <img src="https://github.com/Medok228/Course-work-/blob/main/images/image4.png">
+ <img src="https://github.com/Medok228/Course-work-/blob/main/images/image7.png">
+</li>
+<li>
+уязвимость CWE-200 передача конфиденциальной информации неавторизованному субъекту, при вводе некорректного пользователя сервис выдает - “Неверно указан логин”, а при верном указанном логине - “Неверно указан пароль”, что дает возможность злоумышленнику узнать корректные имена пользователей
+<h4>Эксплуатация уязвимости:</h4> 
+  Выполнить перебор пользователей посредством использование сторонней утилиты
+<h4>Рекомендация по устранении уязвимости:</h4>
+  сделать один ответ при отправки формы пользователем - “Неверен логин или пароль”
+<h4>Скриншоты эксплуатации уязвимости:</h4>
+<img src="https://github.com/Medok228/Course-work-/blob/main/images/image6.png">
+
+<img src="https://github.com/Medok228/Course-work-/blob/main/images/image9.png">
+<img src="https://github.com/Medok228/Course-work-/blob/main/images/image11.png">
+<img src="https://github.com/Medok228/Course-work-/blob/main/images/image2.png">
+
+  
+</li>
+
 </ol>
+
 
 
   
